@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {% if note %}
+        {{ note.text|truncatechars:5 }}
+    {% else %}
+        Заметка не найдена
+    {% endif %}
+{% endblock %}
+
+
+{% block content %}
+{% if not note %}
+Заметка не найдена
+{% endif %}
+<strong>Автор:</strong> {{ note.author.name }}<br>
+<strong>Почта:</strong> {{ note.author.email }}<br>
+<strong>Дата рождения:</strong> {{ note.author.userprofile.birth_date }}<br>
+<strong>Биография:</strong> {{ note.author.userprofile.bio }}<br>
+<strong>Статус:</strong> {{ note.status.name }}<br>
+<strong>Создана:</strong> {{ note.created_at }}<br>
+<strong>Финальный:</strong> {{ note.status.is_final }}<br>
+<strong>Текст:</strong>
+{{ note.text }}<br>
+<strong>Категории:</strong>
+<ul>
+{% for category in note.categories.all %}
+    <li>{{ category.title }}</li>
+{% endfor %}
+</ul>
+
+{% endblock %}
