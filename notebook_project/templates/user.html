@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ user.name }}
+{% endblock %}
+
+
+{% block content %}
+
+<strong>Автор:</strong> {{ user.name }}<br>
+<strong>Почта:</strong> {{ user.email }}<br>
+<strong>Дата рождения:</strong> {{ user.userprofile.birth_date }}<br>
+<strong>Биография:</strong> {{ user.userprofile.bio }}<br>
+
+{% for note in user.note_set.all %}
+    <strong>Заметка:</strong>{{ note.text|truncatechars:200 }}<br>
+    <strong>Статус:</strong>{{ note.status.name }}<br>
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,135 @@
+/* Логотип */
+.logo {
+    width: 160px;
+    margin: -15px 10px 30px 15px;
+    display: block;
+}
+
+
+/* Обнуление */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Вертикальная навигация */
+nav.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 200px;
+    background-color: #2c3e50;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+nav.sidebar a {
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 10px 20px;
+    width: 100%;
+    display: block;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+nav.sidebar a:hover {
+    background-color: #34495e;
+    border-left: 4px solid #1abc9c;
+}
+
+/* Контент */
+main {
+    margin-left: 220px;
+    padding: 30px 40px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    max-width: 900px;
+    min-height: 90vh;
+}
+
+/* Заголовки */
+h1, h2, h4 {
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin-top: 10px;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 15px;
+}
+
+/* Ссылки */
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Футер */
+footer {
+    text-align: center;
+    margin-left: 220px;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+    color: #666;
+    font-size: 14px;
+    background-color: #f9f9f9;
+}
+
+.top-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ccc;
+    gap: 70px;
+}
+
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-form input[type="text"] {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #aaa;
+    border-radius: 4px 0 0 4px;
+}
+
+.search-form button {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #aaa;
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+    background-color: #eee;
+    cursor: pointer;
+}
